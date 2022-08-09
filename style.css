@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+.icon {
+    height: 25px;
+    width: auto;
+}
+
+.userImage {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.userName {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.frontPage {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.header {
+    padding: 20px 60px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    position: relative;
+}
+
+.searchBar {
+    display: grid;
+    grid-template-columns: 40px auto;
+    align-items: center;
+}
+
+input {
+    background-color: #e5e7eb;
+    border: none;
+    border-radius: 15px;
+    font-size: medium;
+    padding: 4px 8px;
+}
+
+.profileBar {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    align-items: center;
+    justify-content: end;
+}
+
+.newBook {
+    grid-column: 1 / 3;
+    padding-top: 20px;
+}
+
+#addBook {
+    display: flex;
+    justify-content: space-around;
+}
+
+fieldset {
+    border: none;
+    padding-top: 10px;
+}
+
+.check {
+    padding-top: 13px;
+}
+
+.error {
+    font-size: 13px;
+    color: red;
+    font-weight: 500;
+}
+
+button {
+    background-color: #60a5fa;
+    border: none;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.icon, .userImage {
+    justify-self: center;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding-bottom: 40px;
+    background-color: #e5e7eb;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+}
+
+#myBooks {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card, .header {
+    box-shadow: 5px 5px 5px rgba(189, 195, 199, 0.5);
+}
+
+.card {
+    background-color: white;
+    border-radius: 6px;
+    padding: 10px 20px;
+    border-left:6px solid #fdba74;
+    display: grid;
+    grid-template-rows: 30px auto;
+    gap: 20px;
+}
+
+.cardTitle {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.cardText div {
+    padding: 2px;
+}
+
+.cardButtons {
+    display: flex;
+    gap: 10px;
+}
+
+.contentTitle {
+    font-size: large;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+a .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    position: absolute;
+    z-index: 1;
+  }
+  
+a:hover .tooltiptext {
+    visibility: visible;
+  }

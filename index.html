@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body>
+    <div class="frontPage">
+        <div class="header">
+
+            <div class="searchBar">
+
+                <img src="./svgs/magnify.svg" alt="search icon" class="icon">
+
+                <input type="text" maxlength="70">
+
+            </div>
+
+            <div class="profileBar">
+
+                <img src="./svgs/bell-ring-outline.svg" alt="notification icon" class="icon">
+
+                <a href='https://www.freepik.com/vectors/chef-illustration'>
+                    <span class="tooltiptext">Chef illustration vector created by catalyststuff - www.freepik.com</span>
+                    <img src="./imgs/hamburguer.jpg" alt="profile picture" class="userImage">
+                </a>
+
+                <div class="userName">Orlando Florida</div>
+
+            </div>
+
+            <div class="newBook">
+
+                <div class="contentTitle">Add Book</div>
+                
+                <form id="addBook">
+                    <fieldset>
+                        <label for="bookTitle">Title</label>
+                        <input type="text" id="bookTitle" placeholder="The Hobbit" name="book_title" onkeydown="return /[a-z ]/i.test(event.key)" required>
+                        <div class="error" id="errorMessage1">*Required</div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="bookAutor">Autor</label>
+                        <input type="text" id="bookAutor" placeholder="J. R. R. Tolkien" name="book_autor" onkeydown="return /[a-z .]/i.test(event.key)" required>
+                        <div class="error" id="errorMessage2"></div>
+                    </fieldset>
+                    <fieldset>
+                        <label for="bookPages">Pages</label>
+                        <input type="tel" id="bookPages" placeholder="304" name="book_pages" minlength="1" maxlength="10" required>
+                        <div class="error" id="errorMessage3"></div>
+                    </fieldset>
+                    <fieldset class="check">
+                        <label for="alreadyRead">Already Read?</label>
+                        <input type="checkbox" id="alreadyRead" name="already_read" value="read">
+                    </fieldset>
+
+                    <button id="submitButton" type="button" onclick="addBookToLibrary();" disabled>Add Book</button>
+                </form>
+
+            </div>
+
+        </div>
+    
+        <div class="mainContent">
+
+            <div class="contentTitle">Your Books</div>
+
+            <div id="myBooks">
+
+            </div>
+
+        </div>
+    
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
